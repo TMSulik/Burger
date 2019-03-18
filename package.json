@@ -1,0 +1,29 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "A burger logger with MySQL, Node, Express, Handlebars",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TMSulik/Burger.git"
+  },
+  "keywords": [
+    "MySQL",
+    "Node",
+    "Express",
+    "Handlebars",
+    "Class exercise"
+  ],
+  "author": "T.M. Sulik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TMSulik/Burger/issues"
+  },
+  "homepage": "https://github.com/TMSulik/Burger#readme"
+}
