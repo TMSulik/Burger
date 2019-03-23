@@ -9,10 +9,3 @@ CREATE TABLE burgers
   devoured BOOLEAN,
   PRIMARY KEY (id)
 );
-
-INSERT INTO burgers
-  (burger_name, devoured)
-VALUES
-  ('Veggie Burger', false),
-  ('Avocado Burger', false),
-  ('Meat Burger', true);

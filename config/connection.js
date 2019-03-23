@@ -1,16 +1,19 @@
 var mysql = require('mysql');
 
-var con = mysql.createConnection({
+var connection = mysql.createConnection({
   host: "localhost",
-  port: 3306,
+  port: 3306, // Local host is 3000. Does it make a difference?
   user: "root",
-  password: "",
+  password: "MSQabraxa$7",
   database: "burgers_db"
 });
 
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
+connection.connect(function(err) {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    return;
+  }
+  console.log("connected as id " + connection.threadId);
 });
-// I think this is correct
-module.exports = con;
+
+module.exports = connection;

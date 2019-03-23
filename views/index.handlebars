@@ -1,0 +1,55 @@
+{{!-- 
+  Setup the `index.handlebars` 
+  to have the template that Handlebars can 
+  render onto. 
+--}}
+
+<main>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col s6">
+        <h2>On the bar</h2>
+        {{#each burgers}}
+          {{#unless this.devoured}}
+            <div>
+              <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+                <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
+              </form>
+            </div>
+          {{/unless}}
+        {{/each}}
+      </div>
+
+      <div class="col s6">
+        <h2>Ingested</h2>
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <div class='burgerEaten'>
+              <div>
+                {{this.burger_name}}
+              </div>
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<h2>Place your custom order here</h2>
+
+{{!-- 
+  Create a button that will submit the user 
+  input into the database. 
+--}}
+
+<div class="row">
+  <div class="col s12">
+    <form action="/burgers" method="POST">
+      <input type="text" id="name" name="burger_name" placeholder="Custom burger description">
+      <button type="submit" class="addBurgerButton">SUBMIT ORDER</button>
+    </form>
+  </div>
+</div>
