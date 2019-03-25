@@ -6,7 +6,7 @@ Call the ORM functions using burger specific input for the ORM.
 
 var burger = {
   selectAll: function(cb) {
-    orm.selectAll("burgers", function(res) {
+    orm.selectAll('burgers', function(res) {
       cb(res);
     });
   },
@@ -17,6 +17,11 @@ var burger = {
   },
   updateOne: function(objColVals, condition, cb) {
     orm.updateOne('burgers', objColVals, condition, function(res) {
+      cb(res);
+    });
+  },
+  removeAll: function(cb) {
+    orm.removeAll('burgers', function(res) {
       cb(res);
     });
   }

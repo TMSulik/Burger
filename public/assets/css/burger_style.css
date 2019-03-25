@@ -46,16 +46,30 @@ h1 {
   font-size: 20px;
   text-align: center;
   border-radius: 25px;
-  margin: 10px;
-  padding: 10px;
-  background-color:  #ffb80e; /* selective yellow */ 
+  margin: 17px;
+  padding: 11px;
+  color: #F6F1C7;
+  background-color:  #813531; /* sanguine brown */ 
 }
 
 h2 {
   text-align: center;
   font-family: 'Baloo Chettan', cursive;
   font-size: 40px;
-  margin: 50px;
+  margin: 40px;
+  margin-bottom: 0;
+}
+
+p {
+  text-align: center;
+}
+
+#ingested {
+  margin-bottom: 66px;
+}
+
+#name {
+  text-align: center;
 }
 
 .formContainer {
@@ -78,6 +92,20 @@ h2 {
 
 .addBurgerButton:active {
  background-color:  #ffb80e; /* selective yellow */ 
+}
+
+.removeBurgers {
+  font-family: 'Baloo Chettan', cursive;
+  font-weight: normal;
+  font-size: 20px;
+  color: #F6F1C7; /* sidecar*/
+  text-align: center;
+  border-radius: 25px;
+  width: 100%;
+  margin: 0;
+  padding: 10px 80px;
+  background-color:  #813531; /* sanguine brown */  
+  border: none;
 }
 
 .burgerFooter {
