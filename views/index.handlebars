@@ -1,7 +1,6 @@
 <main>
   <div class="container">
     <div class="row">
-      
       <div class="col s6">
         <h2>On the bar</h2>
         <p>Click on any burger you wish to eat!</p>
@@ -15,15 +14,15 @@
           {{/unless}}
         {{/each}}
       </div>
-
       <div class="col s6">
-        <h2 id="ingested">Ingested</h2>
+        <h2>Ingested</h2>
+        <p>Click on any eaten burger you wish to flush!</p>
         {{#each burgers}}
           {{#if this.devoured}}
-            <div class='burgerEaten'>
-              <div>
-                {{this.burger_name}}
-              </div>
+            <div>
+              <form action="/burgers/{{this.id}}?_method=DELETE" method="POST">
+                <button type="submit" class='burgerEaten'> {{this.burger_name}}</button>
+              </form>
             </div>
           {{/if}}
         {{/each}}
@@ -35,10 +34,6 @@
 
 <h2>Place your custom order here</h2>
 
-{{!-- 
-  The `name` button submits the user input into the database and adds a new button to the left column. 
---}}
-
 <div class="row">
   <div class="col s12">
     <form action="/burgers" method="POST">
@@ -46,15 +41,4 @@
       <button type="submit" class="addBurgerButton">SUBMIT ORDER</button>
     </form>
   </div>
-</div>
-
-<div class="row">
-    {{!-- <button class="removeBurgers" onclick="myFunction()">CLEAR THE BAR</button> --}}
-  {{!-- <form action="/burgers/Order?_method=PUT" method="DELETE"> --}}
-
-  <form action="/burgers?_method=PUT" method="DELETE">
-    <button type="submit" class='removeBurgers'>CLEAR THE BAR</button>
-  </form>
-
-
 </div>

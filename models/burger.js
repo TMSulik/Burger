@@ -20,8 +20,8 @@ var burger = {
       cb(res);
     });
   },
-  removeAll: function(cb) {
-    orm.removeAll('burgers', function(res) {
+  deleteOne: function(id, cb) {
+    orm.deleteOne('burgers', id, function(res) {
       cb(res);
     });
   }

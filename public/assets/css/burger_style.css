@@ -46,10 +46,12 @@ h1 {
   font-size: 20px;
   text-align: center;
   border-radius: 25px;
-  margin: 17px;
-  padding: 11px;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
   color: #F6F1C7;
-  background-color:  #813531; /* sanguine brown */ 
+  background-color:  #813531; /* sanguine brown */
+  border: none; 
 }
 
 h2 {
@@ -62,10 +64,6 @@ h2 {
 
 p {
   text-align: center;
-}
-
-#ingested {
-  margin-bottom: 66px;
 }
 
 #name {

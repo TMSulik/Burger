@@ -16,7 +16,6 @@ router.get('/burgers', function(req, res) {
 });
 
 router.post('/burgers', function(req, res) {
-  console.log("Router post", req.body);
   burger.insertOne(['burger_name'], [req.body.burger_name
   ], function(data) {    
     res.redirect('/');
@@ -32,13 +31,9 @@ router.put('/burgers/:id', function(req, res) {
   });
 });
 
-// router.delete('/burgers/:id', function (req, res) {
-router.get('/burgers', function (req, res) {
-  console.log('Router delete req: ', req.body);
-  burger.removeAll(function(data) {
-    console.log('Router delete data: ', data);
+router.delete('/burgers/:id', function(req, res) {
+  burger.deleteOne(req.params.id, function(data) {    
     res.redirect('/');
-    // res.send('Got a DELETE request at /user');
   });
 });
 
