@@ -6,7 +6,7 @@ if(process.env.JAWSDB_URL) {
 } else {
   connection = mysql.createConnection({
     host: "localhost",
-    port: 3306, // Local host is 3000. Does it make a difference?
+    port: 3306,
     user: "root",
     password: "MSQabraxa$7",
     database: "burgers_db"
