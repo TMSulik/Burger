@@ -14,6 +14,7 @@ if(process.env.JAWSDB_URL) {
 } else {
   connection = mysql.createConnection({
     host: "us-cdbr-iron-east-02.cleardb.net",
+    port: 3306,
     user: "b830d517332ea6",
     password: "43028d09",
     database: "heroku_1a9a89e61f1406a"
